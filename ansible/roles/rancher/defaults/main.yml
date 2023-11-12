@@ -1,0 +1,5 @@
+---
+rancher:
+  version: v2.6.7
+  # os_packages:
+  #   update: true

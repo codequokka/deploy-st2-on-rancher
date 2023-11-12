@@ -1,0 +1,12 @@
+---
+- name: Upgrade all packages
+  ansible.builtin.yum:
+    name: "*"
+    state: latest
+    update_only: true
+  when: common.os_packages_update
+
+- name: Install dnf versionlock plugin
+  ansible.builtin.yum:
+    name: dnf-command(versionlock)
+    state: present

@@ -1,0 +1,9 @@
+---
+- name: Add iptable modules
+  community.general.modprobe:
+    name: "{{ item }}"
+    persistent: present
+    state: present
+  with_items:
+    - iptable_nat
+    - iptable_filter

@@ -1,0 +1,12 @@
+---
+- name: Setup OS packages
+  ansible.builtin.import_tasks: setup/os_packages.yml
+  tags: setup_common_os_packages
+
+- name: Setup hostname
+  ansible.builtin.import_tasks: setup/hostname.yml
+  tags: setup_common_hostname
+
+- name: Setup chronyd
+  ansible.builtin.import_tasks: setup/chronyd.yml
+  tags: setup_common_chronyd

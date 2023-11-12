@@ -1,0 +1,9 @@
+docker_edition: ce
+docker_version: 20.10.24
+docker_packages:
+  - docker-{{ docker_edition }}-{{ docker_version }}
+  - docker-{{ docker_edition }}-cli-{{ docker_version }}
+  - docker-{{ docker_edition }}-rootless-extras-{{ docker_version }}
+docker_packages_state: present
+docker_users:
+  - "{{ ansible_user }}"

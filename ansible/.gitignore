@@ -1,0 +1,6 @@
+### Ansible ###
+*.retry
+roles_public
+
+### Etc ###
+tmp/

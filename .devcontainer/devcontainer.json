@@ -1,0 +1,29 @@
+{
+  "name": "devcontainer-ansible",
+  "dockerFile": "Dockerfile",
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  },
+  "runArgs": [
+    "--init"
+  ],
+  "workspaceFolder": "/workspace",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "redhat.ansible",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "files.insertFinalNewline": true,
+        // "files.associations": {
+        //   "*.yml": "ansible"
+        // },
+        "ansible.python.interpreterPath": "python3"
+      }
+    }
+  }
+}
