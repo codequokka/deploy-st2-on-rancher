@@ -3,6 +3,9 @@
   hosts: rancher
   become: true
   roles:
-    - common
-    - geerlingguy.docker
-    - rancher
+    - name: common
+      tags: common
+    - name: geerlingguy.docker
+      tags: docker
+    - name: rancher
+      tags: rancher
