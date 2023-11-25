@@ -3,5 +3,7 @@
   hosts: k8s
   become: true
   roles:
-    - common
-    - geerlingguy.docker
+    - name: common
+      tags: common
+    - name: geerlingguy.docker
+      tags: docker
