@@ -10,3 +10,7 @@
 - name: Setup chronyd
   ansible.builtin.import_tasks: setup/chronyd.yml
   tags: setup_common_chronyd
+
+- name: Setup firewalld
+  ansible.builtin.import_tasks: setup/firewalld.yml
+  tags: setup_common_firewalld
