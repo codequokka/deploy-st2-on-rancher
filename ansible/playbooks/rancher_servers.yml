@@ -1,6 +1,6 @@
 ---
-- name: Deploy rancher server
-  hosts: rancher
+- name: Deploy rancher servers
+  hosts: rancher_servers
   become: true
   roles:
     - common
