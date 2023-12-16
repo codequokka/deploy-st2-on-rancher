@@ -1,6 +1,6 @@
 ---
-- name: Deploy K8s servers
-  hosts: k8s
+- name: Deploy rancher k8s servers
+  hosts: rancher_k8s_nodes
   become: true
   roles:
     - common

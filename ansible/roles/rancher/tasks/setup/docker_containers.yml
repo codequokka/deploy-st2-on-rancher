@@ -1,8 +1,9 @@
 ---
-# docker run -d --restart=unless-stopped \
-#   -p 80:80 -p 443:443 \
-#   --privileged \
-#   rancher/rancher:latest
+- name: Install pip modules
+  ansible.builtin.pip:
+    name: requests
+    state: present
+
 - name: Deploy rancher containers
   community.general.docker_container:
     name: rancher

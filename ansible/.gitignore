@@ -1,6 +1,6 @@
 ### Ansible ###
 *.retry
-roles_public
+roles/geerlingguy.docker
 
 ### Etc ###
 tmp/
